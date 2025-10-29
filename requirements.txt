@@ -1,0 +1,10 @@
+torch
+gymnasium
+numpy
+matplotlib
+pyyaml
+tqdm
+tensorboard
+seaborn
+opencv-python
+pygame

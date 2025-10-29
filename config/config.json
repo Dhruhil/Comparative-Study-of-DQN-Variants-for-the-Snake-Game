@@ -1,0 +1,91 @@
+{
+    "seed": 42,
+    "env": {
+        "width": 20,
+        "height": 20,
+        "block_size": 20,
+        "max_steps": 400,
+        "render_mode": false
+    },
+    "defaults": {
+        "hyperparameters": {
+            "learning_rate": 5e-5,
+            "gamma": 0.99,
+            "batch_size": 64,
+            "buffer_size": 1000000,
+            "epsilon_start": 1.0,
+            "epsilon_end": 0.05,
+            "epsilon_decay": 80000,
+            "target_update_freq": 10000,
+            "episodes": 1000
+        },
+        "rewards": {
+            "forward": -0.01,
+            "turn": -0.1,
+            "collision": -10,
+            "food_eaten": 10,
+            "move_closer": 0.5,
+            "move_away": -0.01
+        }
+    },
+    "agents": [
+        {
+            "dqn_agent": "vanilla",
+            "hyperparameters": {},
+            "rewards": {}
+        },
+        {
+            "dqn_agent": "double",
+            "hyperparameters": {},
+            "rewards": {}
+        },
+        {
+            "dqn_agent": "dueling",
+            "hyperparameters": {},
+            "rewards": {}
+        },
+        {
+            "dqn_agent": "dueling",
+            "hyperparameters": {
+                "learning_rate": 7.5e-5,
+                "batch_size": 128,
+                "target_update_freq": 5000
+            },
+            "rewards": {
+                "forward": -0.005,
+                "move_closer": 0.75,
+                "move_away": -0.05
+            }
+        },
+        {
+            "dqn_agent": "dueling",
+            "hyperparameters": {
+                "learning_rate": 2.5e-5,
+                "gamma": 0.995,
+                "epsilon_decay": 120000
+            },
+            "rewards": {
+                "turn": -0.05,
+                "food_eaten": 15,
+                "collision": -12
+            }
+        },
+        {
+            "dqn_agent": "dueling",
+            "hyperparameters": {
+                "learning_rate": 1e-4,
+                "batch_size": 32,
+                "buffer_size": 500000,
+                "epsilon_end": 0.01
+            },
+            "rewards": {
+                "forward": -0.02,
+                "move_closer": 0.6,
+                "move_away": -0.02
+            }
+        }
+    ],
+    "train": {
+        "output_dir": "models"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "dqn_agent": "dueling",
+    "hyperparameters": {
+        "learning_rate": 7.5e-05,
+        "gamma": 0.99,
+        "batch_size": 128,
+        "buffer_size": 1000000,
+        "epsilon_start": 1.0,
+        "epsilon_end": 0.05,
+        "epsilon_decay": 80000,
+        "target_update_freq": 5000,
+        "episodes": 1000
+    },
+    "rewards": {
+        "forward": -0.005,
+        "turn": -0.1,
+        "collision": -10,
+        "food_eaten": 10,
+        "move_closer": 0.75,
+        "move_away": -0.05
+    }
+}
