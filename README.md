@@ -1,23 +1,43 @@
 # Comparative Study of DQN Variants for the Snake Game
 
-## Overview:
-This project presents a comparative study of Vanilla DQN, Double DQN, and Dueling DQN to develop an AI agent capable of learning optimal policies in a 20×20 Snake game environment.
+A **comparative study** of **Vanilla DQN**, **Double DQN**, and **Dueling DQN** was conducted to develop an **AI agent** capable of learning optimal policies in a **20×20 Snake game environment**.
 
-Using OpenAI Gym, the environment was designed with a structured state space (Empty, Snake Body, Food), a discrete action set (Forward, Turn Left, Turn Right), and a reward function that encourages efficient food collection and safe navigation.
+Using **OpenAI Gym**, the environment was designed with:
+- **State space:** Empty, Snake Body, and Food  
+- **Action space:** Forward, Turn Left, and Turn Right  
+- **Reward function:** Encourages efficient food collection and safe navigation  
 
-The agents were trained using:
+---
 
-ε-greedy exploration
+### Training Methodology
 
-Experience replay
+The agents were trained using the following reinforcement learning techniques:
 
-Target network updates
+- **ε-greedy exploration** for balancing exploration and exploitation  
+- **Experience replay** to improve sample efficiency  
+- **Target network updates** for training stability  
+- **Systematic hyperparameter tuning**, including:
+  - Learning rate  
+  - Discount factor (γ)  
+  - Batch size  
 
-Systematic hyperparameter tuning (learning rate, discount factor, batch size)
+---
 
-Across 100 evaluation episodes, Dueling DQN achieved the best overall performance, recording the highest mean reward (357.7), mean score (21.93), and lowest variance, outperforming Vanilla and Double DQN in learning stability, efficiency, and generalization.
+###  Evaluation
 
-This study demonstrates the effectiveness of advanced reinforcement learning architectures and careful hyperparameter optimization in enhancing autonomous decision-making within high-dimensional sequential environments.
+Over **100 evaluation episodes**, **Dueling DQN** demonstrated the **best performance**, achieving:
+- **Highest mean reward:** 357.7  
+- **Highest mean score:** 21.93  
+- **Lowest variance** among all models  
+
+It surpassed both **Vanilla DQN** and **Double DQN** in terms of **learning stability**, **training efficiency**, and **generalization**.
+
+---
+
+###  Key Insight
+
+This study highlights the **impact of architectural advancements** in Deep Q-Learning and **methodical hyperparameter optimization** on improving **autonomous decision-making** within **high-dimensional sequential environments**.
+
 ## Before We Start
 
 Make sure that you've installed all required modules:
