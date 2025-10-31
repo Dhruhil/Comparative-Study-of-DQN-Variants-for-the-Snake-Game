@@ -1,8 +1,23 @@
 # Comparative Study of DQN Variants for the Snake Game
 
-** Overview:
-A comparative study of Vanilla DQN, Double DQN, and Dueling DQN was conducted to develop an AI agent capable of learning optimal policies in a 20×20 Snake game environment. Leveraging OpenAI Gym, a structured state space (Empty, Snake Body, Food), discrete action set (Forward, Turn Left, Turn Right), and a reward function were defined to promote efficient food collection and safe navigation. The agents were trained using ε-greedy exploration, experience replay, and target network updates, with systematic hyperparameter tuning including learning rate, discount factor, and batch size. Over 100 evaluation episodes, Dueling DQN demonstrated superior performance, achieving the highest mean reward (357.7), score (21.93), and lowest variance, surpassing Vanilla and Double DQN in learning stability, efficiency, and generalization. This study highlights the potential of advanced reinforcement learning architectures and methodical hyperparameter optimization to enhance autonomous decision-making in high-dimensional sequential environments.
+## Overview:
+This project presents a comparative study of Vanilla DQN, Double DQN, and Dueling DQN to develop an AI agent capable of learning optimal policies in a 20×20 Snake game environment.
 
+Using OpenAI Gym, the environment was designed with a structured state space (Empty, Snake Body, Food), a discrete action set (Forward, Turn Left, Turn Right), and a reward function that encourages efficient food collection and safe navigation.
+
+The agents were trained using:
+
+ε-greedy exploration
+
+Experience replay
+
+Target network updates
+
+Systematic hyperparameter tuning (learning rate, discount factor, batch size)
+
+Across 100 evaluation episodes, Dueling DQN achieved the best overall performance, recording the highest mean reward (357.7), mean score (21.93), and lowest variance, outperforming Vanilla and Double DQN in learning stability, efficiency, and generalization.
+
+This study demonstrates the effectiveness of advanced reinforcement learning architectures and careful hyperparameter optimization in enhancing autonomous decision-making within high-dimensional sequential environments.
 ## Before We Start
 
 Make sure that you've installed all required modules:
